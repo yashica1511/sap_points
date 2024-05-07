@@ -2,16 +2,23 @@ import React, { useContext,useEffect } from 'react';
 import MainPage from '../../Mainpage';
 import { StudentContext } from '../../context/StudentContext';
 import { useNavigate } from 'react-router-dom';
-
+import supabase from '../../database/Client';
 function Personalinfo() {
 
     const navigate = useNavigate();
     
-    const { Authenticated,setAuthenticated,student,setStudent,Email,setEmail } = useContext(StudentContext);
+    const {Authenticated, setAuthenticated,student, setStudent,name, setName,rollno, setRollno, Email, setEmail, year, setYear,dept,setDept,section,setSection} = useContext(StudentContext);
     
     useEffect(() =>{
         if(!Authenticated){
             navigate('/');
+        }
+        else{
+            supabase.from('student-bio').select('*').eq('email',Email).then((response)=>{
+                const userData = response.data[0];
+                console.log('User data:',userData);
+            })
+            
         }
     });
 
@@ -35,10 +42,7 @@ function Personalinfo() {
                             <label className="block text-gray-700 font-bold mb-1 mr-2"><h5>Year/Class/Section</h5></label>
                             <span className='mb-1'><h5>{name}</h5></span>
                         </div>
-                        <div className="flex items-center">
-                            <label className="block text-gray-700 font-bold mb-1 mr-8"><h5>Phone_Number</h5></label>
-                            <span className='mb-1'><h5>{name}</h5></span>
-                        </div>
+                        
                         <div className="flex items-center">
                             <label className="block text-gray-700 font-bold mb-1 mr-28"><h5>Email</h5></label>
                             <span className='mb-1'><h5>{Email}</h5></span>
