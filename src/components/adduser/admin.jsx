@@ -45,8 +45,9 @@ const AddUsersFromCSV = () => {
   return (
     <div>
       <MainPage />
+      <form>
       <input type="file" accept=".csv" onChange={handleFileChange} />
-      <button onClick={handleAddUsers}>Add Users</button>
+      <button onClick={handleAddUsers}>Add Users</button></form>
     </div>
   );
 };
