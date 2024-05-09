@@ -6,7 +6,7 @@ import { StudentContext } from '../../context/StudentContext';
 import { useNavigate } from 'react-router-dom'
 const AddUsersFromCSV = () => {
   const navigate = useNavigate();
-  const {Authenticated, setAuthenticated,student, setStudent,name, setName,rollno, setRollno, Email, setEmail}= useContext(StudentContext);
+  const { Authenticated, setAuthenticated, student, setStudent, name, setName, rollno, setRollno, Email, setEmail } = useContext(StudentContext);
   useEffect(() => {
     if (!Authenticated) {
       navigate('/');
@@ -41,14 +41,23 @@ const AddUsersFromCSV = () => {
       console.error('Error adding users:', error.message);
     }
   };
-
   return (
     <div>
       <MainPage />
       <form>
-      <input type="file" accept=".csv" onChange={handleFileChange} />
-      <button onClick={handleAddUsers}>Add Users</button></form>
-    </div>
+        <table>
+          <tbody>
+            <tr>
+              <td>
+                <input type="file" accept=".csv" onChange={handleFileChange} />
+              </td><td>
+                <button onClick={handleAddUsers}>Add Users</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </form>
+    </div >
   );
 };
 
