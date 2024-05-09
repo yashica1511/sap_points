@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react';
 import MainPage from '../../Mainpage';
-import staff_1 from '../staff/staff_1';
+import staff_1 from '../staff/Staff_1';
 import { StudentContext } from '../../context/StudentContext';
 import { useNavigate } from 'react-router-dom';
 import supabase from '../../database/Client';
