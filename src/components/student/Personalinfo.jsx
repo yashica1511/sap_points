@@ -8,25 +8,31 @@ function Personalinfo() {
   const navigate = useNavigate();
   const { Authenticated, setAuthenticated, Email } = useContext(StudentContext);
   const [userData, setUserData] = useState(null); 
+  const [Name, setName] = useState(null);
+  const [Roll_Number, setRoll_Number] = useState(null);
+  const [Year, setYear] = useState(null);
+
   useEffect(() => {
     if (!Authenticated) {
       navigate('/');
     } else {
       supabase
-        .from('student-bio')
+        .from('student_bio_details')
         .select('*')
         .eq('email', Email)
         .then((response) => {
-          const fetchedData = response.data[0]; // Assuming there's only one user per email
-          setUserData(fetchedData);
+          console.log(response);
+          setName(response.data[0].name);
+          setRoll_Number(response.data[0].rollno);
+          var string = response.data[0].year + " / " + response.data[0].dept + " / " + response.data[0].section;
+          setYear(string);
         })
         .catch((error) => {
           console.error('Error fetching user data:', error.message);
         });
     }
-  }, [Authenticated, Email, navigate]);
+  }, []);
 
-  const { name, rollno, year, dept, section, email } = userData || {};
   return (
     <div>
       <MainPage />
@@ -40,7 +46,7 @@ function Personalinfo() {
                 <h5>Name</h5>
               </label>
               <span className="mb-1">
-                <h5>{name}</h5>
+                <h5>{Name}</h5>
               </span>
             </div>
             <div className="flex items-center">
@@ -48,7 +54,7 @@ function Personalinfo() {
                 <h5>Roll_Number</h5>
               </label>
               <span className="mb-1">
-                <h5>{rollno}</h5>
+                <h5>{Roll_Number}</h5>
               </span>
             </div>
             <div className="flex items-center">
@@ -56,7 +62,7 @@ function Personalinfo() {
                 <h5>Year/Class/Section</h5>
               </label>
               <span className="mb-1">
-                <h5>{year}/{dept}/{section}</h5>
+                <h5>{Year}</h5>
               </span>
             </div>
             <div className="flex items-center">

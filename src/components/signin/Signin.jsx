@@ -28,6 +28,7 @@ function Signin() {
         }
         else {
             setAuthenticated(true);
+            setEmail(email);
             console.log(data);
             if (email === 'sathiyaseelans.22aid@kongu.edu') {
                 navigate('/admin'); 
