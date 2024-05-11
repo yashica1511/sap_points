@@ -31,7 +31,7 @@ function Signin() {
             setEmail(email);
             console.log(data);
             if (email === 'sathiyaseelans.22aid@kongu.edu') {
-                navigate('/admin'); 
+                navigate('/admin_1'); 
             } else {
                 navigate('/Personalinfo');
             }
@@ -72,7 +72,7 @@ function Signin() {
         return (
             <div>
                 <MainPage />
-                <div className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[645px] bg-white rounded-xl">
+                <div className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[645px] bg-[rgba(255,255,255,0.85)] rounded-xl">
                     <div className="grid grid-cols-2">
                         <div className='column1'>
                             <div className="flex items-start justify-center">

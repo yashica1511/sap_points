@@ -16,7 +16,7 @@ function Staff_1() {
     return (
         <>
             <MainPage />
-            <div className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[1279px] h-[645px] bg-white rounded-xl">
+            <div className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[1279px] h-[645px] bg-[rgba(255,255,255,0.85)] rounded-xl">
                 <div className='w-[57px] h-[59px] bg-[url(../../images/logo.png)] bg-cover bg-no-repeat rounded-[6px] relative mt-[61px] mr-0 mb-0 ml-[609px]' />
                 <span className="block h-[39px] font-['Inknut_Antiqua'] text-[30px] font-normal leading-[39px] text-[#000] relative text-left whitespace-nowrap z-[5] mt-[48px] mr-0 mb-0 ml-[365px]">
                     DEPARTMENT OF ARTIFICIAL INTELLIGENCE

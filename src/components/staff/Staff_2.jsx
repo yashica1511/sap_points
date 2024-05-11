@@ -3,7 +3,7 @@ import MainPage from '../../Mainpage';
 function Staff_2(){
   return (
     <><MainPage/>
-     <div className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[1279px] h-[645px] bg-white rounded-xl">
+     <div className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[1279px] h-[645px] bg-[rgba(255,255,255,0.85)] rounded-xl">
       <div className='w-[57px] h-[59px] bg-[url(../../images/logo.png)] bg-cover bg-no-repeat rounded-[6px] relative mt-[32px] mr-0 mb-0 ml-[609px]' />
       <div className='w-[494px] h-[50px] relative z-[44] mt-[17px] mr-0 mb-0 ml-[67px]'>
         <span className="flex h-[78%] justify-start items-start font-['Inknut_Antiqua'] text-[20px] font-bold leading-[40px] text-[#000] absolute top-0 left-[15.79%] text-left whitespace-nowrap z-[44]">

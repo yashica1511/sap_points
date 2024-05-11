@@ -5,32 +5,32 @@ function Staff_3() {
     return (
         <>
             <MainPage />
-            <div className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[1279px] h-[645px] bg-white rounded-xl">  <div className='w-[57px] h-[59px] bg-[url(../../images/logo.png)] bg-cover bg-no-repeat rounded-[6px] relative mt-[32px] mr-0 mb-0 ml-[609px]' />
-                <div className='w-[1179px] h-[47px] relative z-[41] mt-[30px] mr-0 mb-0 ml-[67px]'>
-                    <span className="flex h-[82.98%] justify-start items-start font-['Inknut_Antiqua'] text-[20px] font-bold leading-[39px] text-[#000] absolute top-0 left-[7.63%] text-left whitespace-nowrap z-40">
-                        YEAR :
-                    </span>
-                    <div className='w-[69px] h-[47px] bg-[#fff] rounded-[8px] border-solid border border-[#fff] absolute top-0 left-[226px] box-content overflow-hidden z-[1]'>
-                        <input className='w-[69px] h-[47px] bg-transparent border-none absolute top-0 left-0 z-[3]' />
-                    </div>
-                    <span className="flex h-[82.98%] justify-start items-start font-['Inknut_Antiqua'] text-[20px] font-bold leading-[39px] text-[#000] absolute top-0 left-[31.55%] text-left whitespace-nowrap z-[41]">
-                        DEPARTMENT :
-                    </span>
-                    <div className='w-[339px] h-[47px] bg-[#fff] rounded-[8px] border-solid border border-[#fff] absolute top-0 left-[579px] box-content z-[4]'>
-                        <span className="flex h-[26px] justify-start items-start font-['Inter'] text-[16px] font-normal leading-[26px] text-[#171a1f] absolute top-[11px] left-[12px] text-left whitespace-nowrap z-[5]" />
-                    </div>
-                    <span className="flex h-[82.98%] justify-start items-start font-['Inknut_Antiqua'] text-[20px] font-bold leading-[39px] text-[#000] absolute top-0 left-[81.68%] text-left whitespace-nowrap z-[6]">
-                        SECTION :
-                    </span>
-                    <div className='w-[69px] h-[47px] bg-[#fff] rounded-[8px] border-solid border border-[#fff] absolute top-0 left-[1110px] box-content z-[7]'>
-                        <span className="flex h-[26px] justify-start items-start font-['Inter'] text-[16px] font-normal leading-[26px] text-[#171a1f] absolute top-[11px] left-[12px] text-left whitespace-nowrap z-[8]" />
-                    </div>
-                    <div className='w-[34px] h-[34px] absolute top-[10px] left-0 overflow-hidden z-[33]'>
-                        <div className='w-[35%] h-3/4 absolute top-[0%] left-[12.5%] z-[39]'>
-                            <div className='w-[30px] h-[25px] bg-[url(../../images/filter_image.png)] bg-[length:100%_100%] bg-no-repeat relative z-[30] mt- mr-0 mb-0 ml-0' />
-                            </div>
+
+            <div className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[1279px] h-[645px] bg-[rgba(255,255,255,0.85)] rounded-xl">               <div className='w-[1179px] h-[47px] relative z-[41] mt-[30px] mr-0 mb-0 ml-[67px]'>
+                <span className="flex h-[82.98%] justify-start items-start font-['Inknut_Antiqua'] text-[20px] font-bold leading-[39px] text-[#000] absolute top-0 left-[7.63%] text-left whitespace-nowrap z-40">
+                    YEAR :
+                </span>
+                <div className='w-[69px] h-[47px] bg-[#fff] rounded-[8px] border-solid border border-[#fff] absolute top-0 left-[226px] box-content overflow-hidden z-[1]'>
+                    <input className='w-[69px] h-[47px] bg-transparent border-none absolute top-0 left-0 z-[3]' />
+                </div>
+                <span className="flex h-[82.98%] justify-start items-start font-['Inknut_Antiqua'] text-[20px] font-bold leading-[39px] text-[#000] absolute top-0 left-[31.55%] text-left whitespace-nowrap z-[41]">
+                    DEPARTMENT :
+                </span>
+                <div className='w-[339px] h-[47px] bg-[#fff] rounded-[8px] border-solid border border-[#fff] absolute top-0 left-[579px] box-content z-[4]'>
+                    <span className="flex h-[26px] justify-start items-start font-['Inter'] text-[16px] font-normal leading-[26px] text-[#171a1f] absolute top-[11px] left-[12px] text-left whitespace-nowrap z-[5]" />
+                </div>
+                <span className="flex h-[82.98%] justify-start items-start font-['Inknut_Antiqua'] text-[20px] font-bold leading-[39px] text-[#000] absolute top-0 left-[81.68%] text-left whitespace-nowrap z-[6]">
+                    SECTION :
+                </span>
+                <div className='w-[69px] h-[47px] bg-[#fff] rounded-[8px] border-solid border border-[#fff] absolute top-0 left-[1110px] box-content z-[7]'>
+                    <span className="flex h-[26px] justify-start items-start font-['Inter'] text-[16px] font-normal leading-[26px] text-[#171a1f] absolute top-[11px] left-[12px] text-left whitespace-nowrap z-[8]" />
+                </div>
+                <div className='w-[34px] h-[34px] absolute top-[10px] left-0 overflow-hidden z-[33]'>
+                    <div className='w-[35%] h-3/4 absolute top-[0%] left-[12.5%] z-[39]'>
+                        <div className='w-[30px] h-[25px] bg-[url(../../images/filter_image.png)] bg-[length:100%_100%] bg-no-repeat relative z-[30] mt- mr-0 mb-0 ml-0' />
                     </div>
                 </div>
+            </div>
                 <div className='w-[1098.01px] h-[164px] bg-[rgba(0,0,0,0)] rounded-[8px] border-solid border border-[#dee1e6] relative overflow-hidden z-[9] mt-[95px] mr-0 mb-0 ml-[84px]'>
                     <div className='w-[1098.01px] h-[68px] bg-[rgba(0,0,0,0)] relative z-[22] mt-0 mr-0 mb-0 ml-0'>
                         <div className='w-[30.6%] h-full bg-[#fafafb] border-solid border border-[#dee1e6] absolute top-0 left-[47.63%] overflow-hidden z-[23]'>

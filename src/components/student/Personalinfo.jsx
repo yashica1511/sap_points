@@ -40,7 +40,7 @@ function Personalinfo() {
   return (
     <div>
       <MainPage />
-      <div className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[1279px] h-[645px] bg-white rounded-xl p-4">
+     <div className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[1279px] h-[645px] bg-[rgba(255,255,255,0.85)] rounded-xl p-4">
         <div className="flex items-center">
           <img src="./images/WireframeImagePlaceholder.png" alt="Profile Photo" className="p-4 w-15 h-30" />
           <div className="mt-6 px-6">
