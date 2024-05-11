@@ -6,6 +6,9 @@ function Admin_1() {
     const alloc = () => {
         navigate('/Admin_2');
     };
+    const dataFetch = () => {
+      navigate('/Admin_3');
+    }
   return (<>
     <MainPage/>
     <div className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[1279px] h-[645px] bg-[rgba(255,255,255,0.85)] rounded-xl">
@@ -20,7 +23,7 @@ function Admin_1() {
           </span>
         </button>
         <div className='w-[244.213px] h-[131.397px] shrink-0 bg-[#a07ce9] rounded-[8px] relative overflow-hidden shadow-[0_17px_35px_0_rgba(23,26,31,0.24)] z-[3]'>
-          <span className="flex w-[121px] h-[39px] justify-center items-start font-['Inknut_Antiqua'] text-[15px] font-normal leading-[38.685px] text-[#000] absolute top-[46.78px] left-[calc(50%-63.61px)] text-center rotate-[0.09deg] whitespace-nowrap z-[4]">
+          <span className="flex w-[121px] h-[39px] justify-center items-start font-['Inknut_Antiqua'] text-[15px] font-normal leading-[38.685px] text-[#000] absolute top-[46.78px] left-[calc(50%-63.61px)] text-center rotate-[0.09deg] whitespace-nowrap z-[4]" onClick={dataFetch}>
             FETCH DATA
           </span>
         </div>
