@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react';
 import MainPage from '../../Mainpage';
-import staff_1 from '../staff/Staff_1';
+import Student_1 from './student_1';
 import { StudentContext } from '../../context/StudentContext';
 import { useNavigate } from 'react-router-dom';
 import supabase from '../../database/Client';
@@ -14,7 +14,7 @@ function Personalinfo() {
   const [Roll_Number, setRoll_Number] = useState(null);
   const [Year, setYear] = useState(null);
   const page1 = () => {
-    navigate('/staff_1');
+    navigate('/student_1');
   }
   useEffect(() => {
     if (!Authenticated) {
@@ -82,9 +82,9 @@ function Personalinfo() {
         <div className="flex justify-center mt-10">
                     <button className="button1 absolute bottom-40 left-25 mt-6 py-2 px-4 w-15 h-11 rounded-md font-semibold focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm bg-purple-300 text-black"
                     onClick={page1}>Semester 3</button>
-                    <button className="button1 absolute bottom-40 right-25 mt-6 py-2 px-4 w-15 h-11 rounded-md font-semibold focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm bg-purple-300 text-black">Semester 4</button>
-                    <button className="button1 absolute bottom-20 left-25 mt-3 py-2 px-4 w-15 h-11 rounded-md font-semibold focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm bg-purple-300 text-black">Semester 5</button>
-                    <button className="button1 absolute bottom-20 right-25 mt-3 py-2 px-4 w-15 h-11 rounded-md font-semibold focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm bg-purple-300 text-black">Semester 6</button>
+                    <button className="button1 absolute bottom-40 right-25 mt-6 py-2 px-4 w-15 h-11 rounded-md font-semibold focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm bg-purple-300 text-black"onClick={page1}>Semester 4</button>
+                    <button className="button1 absolute bottom-20 left-25 mt-3 py-2 px-4 w-15 h-11 rounded-md font-semibold focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm bg-purple-300 text-black"onClick={page1}>Semester 5</button>
+                    <button className="button1 absolute bottom-20 right-25 mt-3 py-2 px-4 w-15 h-11 rounded-md font-semibold focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm bg-purple-300 text-black"onClick={page1}>Semester 6</button>
                 </div>
             </div>
         </div>
