@@ -1,6 +1,5 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React from 'react';
 import MainPage from '../../Mainpage';
-import { StudentContext } from '../../context/StudentContext';
 import { useNavigate } from 'react-router-dom';
 import supabase from '../../database/Client';
 import Student_3 from './student_3';

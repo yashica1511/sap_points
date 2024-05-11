@@ -5,7 +5,7 @@ function Student_3() {
   return (
     <div>
     <MainPage/>
-    <div className='main-container absolute top-[40px] left-[80px] w-[1356px] h-[1440px] bg-white border-2 border-[#BCC1CAFF] rounded border-solid pb-10'>
+    <div className='main-container absolute top-[40px] left-[80px] w-[1356px] h-[1440px] bg-[rgba(255,255,255,0.85)] border-2 border-[#BCC1CAFF] rounded border-solid pb-10'>
       <div className='w-[1214px] h-[249px] relative z-30 mt-[65px] mr-0 mb-0 ml-[55px]'>
       <div className='w-[224px] h-[248px] bg-[rgba(131,83,226,0.74)] rounded-[8px] absolute top-px left-0 shadow-[0_17px_35px_0_rgba(23,26,31,0.24)] z-[1]'>
           <div className='w-[224px] h-[154px] bg-[url(../../images/Paper_Presentation.jpg)] bg-cover bg-no-repeat rounded-[6px] relative z-[17] mt-0 mr-0 mb-0 ml-0' />

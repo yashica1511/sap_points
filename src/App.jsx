@@ -13,6 +13,9 @@ import Admin_3 from './components/adduser/admin_3';
 import Admin_4 from './components/adduser/admin_4';
 import Staff_4 from './components/staff/Staff_4';
 import Staff_5 from './components/staff/Staff_5';
+import Student_1 from './components/student/student_1';
+import Student_2 from './components/student/student_2'; 
+import Student_3 from './components/student/student_3';
 function App() {
   return (
     <StudentProvider>
