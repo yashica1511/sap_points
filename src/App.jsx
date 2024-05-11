@@ -8,6 +8,7 @@ import Staff_1 from './components/staff/Staff_1';
 import Staff_2 from './components/staff/Staff_2';
 import Staff_3 from './components/staff/Staff_3';
 import Admin_1 from './components/adduser/admin_1';
+import Admin_2 from './components/adduser/admin_2';
 function App() {
   return (
     <StudentProvider>
@@ -20,6 +21,7 @@ function App() {
           <Route path='/Staff_2' element={<Staff_2/>}/>
           <Route path='/Staff_3' element={<Staff_3/>}/>
           <Route path='/Admin_1' element={<Admin_1/>}/>
+          <Route path='/Admin_2' element={<Admin_2/>}/>
 
         </Routes>
       </BrowserRouter>

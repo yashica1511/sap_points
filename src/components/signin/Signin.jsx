@@ -30,7 +30,7 @@ function Signin() {
             setAuthenticated(true);
             setEmail(email);
             console.log(data);
-            if (email === 'sathiyaseelans.22aid@kongu.edu') {
+            if (email === 'admin@kongu.edu') {
                 navigate('/admin_1'); 
             } else {
                 navigate('/Personalinfo');
