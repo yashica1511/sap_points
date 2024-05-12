@@ -1,8 +1,34 @@
-import React from 'react';
+import React,{useState, useContext} from 'react';
+import supabase from '../../database/Client';
 
 const PaperPresentationPopup = ({ onClose }) => {
-  
+  const [place, setPlace] = useState('');
+    const [position, setPosition] = useState('');
+    const [date, setDate] = useState('');
+    const [proof, setProof] = useState('');
+
+    const handleSubmit = async (e) => {
+      try{
+        const { data, error } = await supabase  
+        .from('students_sap')
+        .insert([{
+          place: place,
+          position: position,
+          date: date,
+          proof: proof,
+        }]);
+        if (error) {
+          throw error;
+        } 
+        console.log("Data iNserted Successfully",data);
+        onClose();
+      }
+      catch (error) {  
+        console.log("Error inserting data: ", error.message);
+      }
   return (
+    
+
     <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-10 z-50">
   <div className="relative overflow-hidden custom-container">
     <div class="absolute top-[-138px] left-[129px] w-[187px] h-[191px] bg-[#8353E2FF] rounded-full"/>
@@ -62,6 +88,6 @@ const PaperPresentationPopup = ({ onClose }) => {
   );
 };
 
-
+}
 export default PaperPresentationPopup;
 

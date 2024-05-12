@@ -108,4 +108,15 @@ h6{
     opacity: 1;  
     cursor:pointer;
   }
- 
+  .main-container {
+    position: absolute;
+    top: 40px;
+    left: 70px;
+    width: 1356px;
+    height: calc(100% - 70px); 
+    background: rgba(255, 255, 255, 0.85);
+    border: 5px rgba(255, 255, 255, 0.85);
+    border-radius: 20px;
+    padding-bottom: 10px;
+    overflow-y: auto; /* Enable vertical scrolling */
+  }
