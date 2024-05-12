@@ -1,6 +1,36 @@
-import React from 'react';
+import React, {useContext,useState, useEffect} from 'react';
 import MainPage from '../../Mainpage';
+import { useNavigate } from 'react-router-dom';
+import supabase from '../../database/Client';
+import { StudentContext } from '../../context/StudentContext';
 function Student_2(){
+  const navigate = useNavigate();
+  const { Authenticated, setAuthenticated, Email } = useContext(StudentContext);
+  const [userData, setUserData] = useState(null); 
+  const [Name, setName] = useState(null);
+  const [Roll_Number, setRoll_Number] = useState(null);
+  const [Year, setYear] = useState(null);
+  const [Dept, setDept] = useState(null);
+  const [Section, setSection] = useState(null);
+  if(!Authenticated){
+    navigate('/');    
+  } else {  
+    supabase
+      .from('student_bio_details')
+      .select('*')
+      .eq('email', Email)
+      .then((response) => {
+        console.log(response);
+        setName(response.data[0].name);
+        setRoll_Number(response.data[0].rollno);
+        setYear(response.data[0].year);
+        setDept(response.data[0].dept);
+        setSection(response.data[0].section);
+      })
+      .catch((error) => {
+        console.error('Error fetching user data:', error.message);
+      });   
+  }
     return(
         <div>
             <MainPage/>
@@ -16,22 +46,32 @@ function Student_2(){
           SECTION :
         </span>
         <div className='w-[57.24px] h-[59.231px] bg-[url(../../images/logo.png)] bg-cover bg-no-repeat rounded-[6px] absolute top-[0.17px] left-0' />
-        <div className='w-[69.191px] h-[47.28px] bg-[#fff] rounded-[8px] border-solid border border-[#fff] absolute top-[1.45px] left-[1149.015px] box-content z-[5]'>
-          <span className="flex h-[26px] justify-start items-start font-['Inter'] text-[16px] font-normal leading-[26px] text-[#171a1f] absolute top-[11.232px] left-[12.045px] text-left whitespace-nowrap z-[6]" />
+        <div className='w-[69.191px] h-[47.28px] bg-transparent rounded-[8px] border-solid border border-transparent absolute top-[1.45px] left-[1149.015px] box-content z-[5]'>
+          <span className="flex h-[26px] justify-start items-start font-['Inter'] text-[20px] font-normal leading-[26px] text-[#171a1f] absolute top-[11.232px] left-[12.045px] text-left whitespace-nowrap z-[6]" >
+            <h2>{Section}</h2>
+            </span>
         </div>
-        <div className='w-[69.191px] h-[47.28px] bg-[#fff] rounded-[8px] border-solid border border-[#fff] absolute top-[5.225px] left-[221.022px] box-content z-[1]'>
-          <span className="flex h-[26px] justify-start items-start font-['Inter'] text-[16px] font-normal leading-[26px] text-[#171a1f] absolute top-[11.232px] left-[12.045px] text-left whitespace-nowrap z-[2]" />
+        <div className='w-[69.191px] h-[48px] bg-transparent rounded-[8px] border-solid border border-transparent absolute top-[0px] left-[221.022px] box-content z-[39]'>
+          <span className="flex h-[48px] justify-start items-start font-['Inter'] text-[16px] font-normal leading-[26px] text-[#171a1f] absolute top-[11.232px] left-[12.045px] text-left whitespace-nowrap z-[2]" >
+            <h2>{Year}</h2>
+          </span>
         </div>
-        <div className='w-[339.188px] h-[48.379px] bg-[#fff] rounded-[8px] border-solid border border-[#fff] absolute top-[7.65px] left-[584.04px] box-content z-[3]'>
-          <span className="flex h-[26px] justify-start items-start font-['Inter'] text-[16px] font-normal leading-[26px] text-[#171a1f] absolute top-[12.33px] left-[12.045px] text-left whitespace-nowrap z-[4]" />
+        <div className='w-[339.188px] h-[48.379px] bg-transparent rounded-[8px] border-solid border border-transparent absolute top-[7.65px] left-[584.04px] box-content z-[3]'>
+          <span className="flex h-[26px] justify-start items-start font-['Inter'] text-[16px] font-normal leading-[26px] text-[#171a1f] absolute top-[12.33px] left-[12.045px] text-left whitespace-nowrap z-[4]">
+            <h2>{Dept}</h2>
+          </span>
         </div>
       </div>
       <div className='w-[1117.006px] h-[50.998px] relative z-[43] mt-[12.053px] mr-0 mb-0 ml-[129.614px]'>
-        <div className='w-[368.188px] h-[48.497px] bg-[#fff] rounded-[8px] border-solid border border-[#fff] absolute top-0 left-[748.817px] box-content z-[37]'>
-          <span className="flex h-[26px] justify-start items-start font-['Inter'] text-[16px] font-normal leading-[26px] text-[#171a1f] absolute top-[12.448px] left-[12.045px] text-left whitespace-nowrap z-[38]" />
+        <div className='w-[368.188px] h-[48.497px] bg-transparent rounded-[8px] border-solid border border-transparent absolute top-0 left-[748.817px] box-content z-[37]'>
+          <span className="flex h-[26px] justify-start items-start font-['Inter'] text-[16px] font-normal leading-[26px] text-[#171a1f] absolute top-[12.448px] left-[12.045px] text-left whitespace-nowrap z-[38]" >
+           <h2>{Roll_Number}</h2>
+            </span>
         </div>
-        <div className='w-[370.188px] h-[48.505px] bg-[#fff] rounded-[8px] border-solid border border-[#fff] absolute top-[2.493px] left-[133.823px] box-content z-[35]'>
-          <span className="flex h-[26px] justify-start items-start font-['Inter'] text-[16px] font-normal leading-[26px] text-[#171a1f] absolute top-[12.456px] left-[12.045px] text-left whitespace-nowrap z-[36]" />
+        <div className='w-[370.188px] h-[48.505px] bg-transparent rounded-[8px] border-solid border border-transparent absolute top-[2.493px] left-[133.823px] box-content z-[35]'>
+          <span className="flex h-[26px] justify-start items-start font-['Inter'] text-[16px] font-normal leading-[26px] text-[#171a1f] absolute top-[12.456px] left-[12.045px] text-left whitespace-nowrap z-[36]">
+            <h2>{Name}</h2>
+          </span>
         </div>
         <span className="flex h-[44px] justify-start items-start font-['Inknut_Antiqua'] text-[26px] font-bold leading-[44px] text-[#000] absolute top-[2.542px] left-[563px] text-left rotate-[0.23deg] whitespace-nowrap z-[43]">
           ROLL NO:

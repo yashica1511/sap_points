@@ -1,6 +1,7 @@
 import React from 'react';
 
 const PaperPresentationPopup = ({ onClose }) => {
+  
   return (
     <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-10 z-50">
   <div className="relative overflow-hidden custom-container">
