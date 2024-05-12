@@ -23,13 +23,16 @@ function Admin_2() {
 
   return (
     <>
-
-      <div className='flex flex-col items-center mt-[100px]'>
-        <div className='h-[3vh] w-[3wv] bg-[url(../../images/logo.png)] bg-cover bg-no-repeat rounded-[6px]' />
-        <div className='flex flex-col items-center bg-tilebox bg-white rounded-lg h-[50vh] w-[60vh] overflow-y-auto p-2'>
-          <span className="block h-[70px] font-['Inknut_Antiqua'] text-[30px] font-normal  text-[#000] relative text-left rotate-[0.09deg] whitespace-nowrap z-[5]"> DEPARTMENT OF ARTIFICIAL INTELLIGENCE </span>
-          <div className='flex flex-col justify-center w-full'>
-            <table className='border border-1 overflow-y-auto rounded-lg'>
+      <MainPage />
+      <div className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[1279px] h-[645px] bg-[rgba(255,255,255,0.85)] rounded-xl">
+      <div className='w-[57.096px] h-[59.093px] bg-[url(../../images/logo.png)] bg-cover  rounded-[6px] relative mt-[61.991px]  ml-[609.099px]' />
+      <span className="block h-[70px] font-['Inknut_Antiqua'] text-[30px] font-normal leading-[39px] text-[#000] relative text-left rotate-[0.09deg] whitespace-nowrap z-[5] mt-[67.78px] mr-0 mb-0 ml-[350.863px]">
+        DEPARTMENT OF ARTIFICIAL INTELLIGENCE
+      </span>
+      <div className='flex flex-col items-center mt-[0px] bg-transparent '>
+        <div className='flex flex-col items-center bg-transparent bg-white rounded-lg h-[50vh] w-[100vh] overflow-y-auto p-2'>
+         <div className='flex flex-col justify-center w-full bg-transparent '>
+            <table className='border border-1 overflow-y-auto bg-transparent rounded-lg w-[96vh]'>
               <thead>
                 <tr>
                   <th className='px-4 py-2 border'>SNo</th>
@@ -50,8 +53,8 @@ function Admin_2() {
           </div>
         </div>
       </div>
+    </div>
     </>
   );
 }
-
 export default Admin_2;
