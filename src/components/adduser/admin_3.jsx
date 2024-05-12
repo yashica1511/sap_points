@@ -20,10 +20,9 @@ function Admin_3() {
       <option value="II">II</option>
           </select>
           <div className='w-[16px] h-[16px] absolute top-1/2 right-[11px] translate-x-0 translate-y-[-46.88%] overflow-hidden z-[4]'>
-            <div className='w-[12px] h-[7.073px] bg-[url(../assets/images/533a2f8c-c8e2-4221-a9e0-5254b9c0c300.png)] bg-[length:100%_100%] bg-no-repeat relative z-[5] mt-[4.667px] mr-0 mb-0 ml-[2px]' />
           </div>
       </div>
-      <span className="flex h-[47px] justify-start items-start font-['Inknut_Antiqua'] text-[25px] font-bold leading-[47px] text-[#000] absolute top-[277px] left-[calc(50%-371.5px)] text-left whitespace-nowrap z-[18]">
+      <span className="flex h-[47px] justify-start items-start font-['Inknut_Antiqua'] text-[25px] font-bold leading-[47px] text-[#000] absolute top-[230px] left-[calc(50%-371.5px)] text-left whitespace-nowrap z-[18]">
         YEAR :
       </span>
       <div className='w-[245px] h-[55px] bg-[rgba(0,0,0,0)] rounded-[8px] border-solid border-[5px] border-[rgba(144,149,160,0.2)] absolute top-1/2 left-1/2 translate-x-[58.57%] translate-y-[19.09%] z-[7] pointer'>
@@ -36,7 +35,7 @@ function Admin_3() {
           </div>
        
       </div>
-      <span className="flex h-[47px] justify-start items-start font-['Inknut_Antiqua'] text-[25px] font-bold leading-[47px] text-[#000] absolute top-[383px] left-[calc(50%-371.5px)] text-left whitespace-nowrap z-[19]">
+      <span className="flex h-[47px] justify-start items-start font-['Inknut_Antiqua'] text-[25px] font-bold leading-[47px] text-[#000] absolute top-[330px] left-[calc(50%-371.5px)] text-left whitespace-nowrap z-[19]">
         DEPARTMENT :
       </span>
       <div className='w-[245px] h-[55px] bg-[rgba(0,0,0,0)] rounded-[8px] border-solid border-[5px] border-[rgba(144,149,160,0.2)] absolute top-1/2 left-1/2 translate-x-[58.57%] translate-y-[210%] z-[12] pointer'>
@@ -48,7 +47,7 @@ function Admin_3() {
             <div className='w-[12px] h-[7.073px] bg-[url(../assets/images/bbe223cd-e417-4ca0-9dac-51297d5908a0.png)] bg-[length:100%_100%] bg-no-repeat relative z-[15] mt-[4.667px] mr-0 mb-0 ml-[2px]' />
           </div>
       </div>
-      <span className="flex h-[47px] justify-start items-start font-['Inknut_Antiqua'] text-[25px] font-bold leading-[47px] text-[#000] absolute top-[488px] left-[calc(50%-371.5px)] text-left whitespace-nowrap z-20">
+      <span className="flex h-[47px] justify-start items-start font-['Inknut_Antiqua'] text-[25px] font-bold leading-[47px] text-[#000] absolute top-[440px] left-[calc(50%-371.5px)] text-left whitespace-nowrap z-20">
         SECTION :
       </span>
       <button className="flex w-[145px] h-[45px] justify-center items-start font-['Inknut_Antiqua'] text-[20px] font-bold leading-[45px] text-[#000] absolute top-[550px] left-[calc(50%--239.5px)] text-center whitespace-nowrap z-[21]" >

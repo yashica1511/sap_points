@@ -1,6 +1,12 @@
 import React from 'react';
 import MainPage from '../../Mainpage';
+
+import {useNavigate} from 'react-router-dom';
 function Staff_2(){
+  const navigate = useNavigate();
+  const fdata_1  = () => {
+    navigate('/Staff_4'); 
+  };
   return (
     <><MainPage/>
      <div className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[1279px] h-[645px] bg-[rgba(255,255,255,0.85)] rounded-xl">
@@ -35,7 +41,7 @@ function Staff_2(){
           </div>
         </div>
         <button className='w-[160px] h-[38px] bg-[rgba(131,83,226,0.93)] rounded-[4px] border-none absolute top-[21px] left-[789px] overflow-hidden z-[42] pointer'>
-          <span className="flex h-[102.63%] justify-start items-start font-['Inknut_Antiqua'] text-[15px] font-normal leading-[38.685px] text-[#000] absolute top-[-2.63%] left-[2.91%] text-left whitespace-nowrap z-[43]">
+          <span className="flex h-[102.63%] justify-start items-start font-['Inknut_Antiqua'] text-[15px] font-normal leading-[38.685px] text-[#000] absolute top-[-2.63%] left-[2.91%] text-left whitespace-nowrap z-[43]" onClick={fdata_1}> 
             DOWNLOAD REPORT
           </span>
         </button>

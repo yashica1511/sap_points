@@ -9,8 +9,12 @@ import Staff_2 from './components/staff/Staff_2';
 import Staff_3 from './components/staff/Staff_3';
 import Admin_1 from './components/adduser/admin_1';
 import Admin_2 from './components/adduser/admin_2';
+import Admin_3 from './components/adduser/admin_3';
+import Admin_4 from './components/adduser/admin_4';
+import Staff_4 from './components/staff/Staff_4';
+import Staff_5 from './components/staff/Staff_5';
 import Student_1 from './components/student/student_1';
-import Student_2 from './components/student/student_2';
+import Student_2 from './components/student/student_2'; 
 import Student_3 from './components/student/student_3';
 function App() {
   return (
@@ -23,8 +27,12 @@ function App() {
           <Route path='/Staff_1' element={<Staff_1/>}/>
           <Route path='/Staff_2' element={<Staff_2/>}/>
           <Route path='/Staff_3' element={<Staff_3/>}/>
+          <Route path='/Staff_4' element={<Staff_4/>}/>
+          <Route path='/Staff_5' element={<Staff_5/>}/>
           <Route path='/Admin_1' element={<Admin_1/>}/>
           <Route path='/Admin_2' element={<Admin_2/>}/>
+          <Route path='/Admin_3' element={<Admin_3/>}/>
+          <Route path='/Admin_4' element={<Admin_4/>}/> 
           <Route path='/Student_1' element={<Student_1/>}/>
           <Route path='/Student_2' element={<Student_2/>}/>
           <Route path='/Student_3' element={<Student_3/>}/>
