@@ -95,3 +95,17 @@ h6{
 .bottom-40{
     bottom: 40%;
 }
+.custom-container {
+    width: 467px;
+  }
+
+  .custom-select {
+    width: 288px;
+  }
+  .pa_custom-file-upload {
+    text:white;
+    background: #8353E2FF; /* secondary-500 */
+    opacity: 1;  
+    cursor:pointer;
+  }
+ 
