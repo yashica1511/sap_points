@@ -5,7 +5,8 @@ import { useNavigate } from 'react-router-dom';
 
 function Admin_2() {
   const [data, setData] = useState([]);
-  const [selectedEmail, setSelectedEmail] = useState(null);
+  const [selectedEmail, setSelectedEmail] = useState(false);
+
   useEffect(() => {
     fetchData();
   }, []);
@@ -21,6 +22,35 @@ function Admin_2() {
     }
   }
 
+  const HandleAllocateClick = async () => {
+    const { data: staff_detils, error } = await supabase.from('staff_detils').select('*');
+
+    if (error) {
+      console.error('Error fetching data:', error);
+    } 
+    const password = staff_detils.password;
+    console.log(password);
+
+    const {user, error:authError}=await supabase.auth.signIn({
+      email:selectedEmail,
+      password:password
+    });
+    if (authError) {
+      console.error('Authentication failed:', authError);
+      return;
+    }
+    else{
+      console.log('User:', user);
+    }
+    const { error: insertError } = await supabase
+    .from('staff_detils')
+    .update({ year: selectedYear, department: selectedDept, section: selectedSection })
+    .eq('email', selectedEmail);
+
+    if (insertError) {
+      console.error('Error inserting data:', insertError);
+    }
+  }
   return (
     <>
       <MainPage />
@@ -52,24 +82,28 @@ function Admin_2() {
               </table>
               {selectedEmail && (
                 <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 flex items-center justify-center">
+
                   <div className="bg-[#D9CBF6] p-4 rounded flex flex-col relative">
+                    <button className="absolute top-0 right-0 m-2" onClick={() => setSelectedEmail(false)}>
+                      <img src="../../images/close_icon.png" alt="Close" style={{ width: '20px', height: '20px' }} />
+                    </button>
                     <div className="flex justify-center">
-                      <h2 className="font-Inknut_Antiqua text-26px mb-6 text-black">ALLOCATE  SAP  COORDINATOR</h2>
+                      <h2 className="font-Inknut_Antiqua text-26px mb-6 text-black">SAP  COORDINATOR</h2>
                     </div>
-                    <div className="flex h-[110px]">
+                    <div className="flex h-[60px]">
                       <div className='w-[136px] h-[-60px] text-0 '>
                         <span className="block font-Inter text-14px font-bold leading-22px text-#323842 relative whitespace-nowrap">
                           YEAR
                         </span>
-                        <div className='w-135 h-21 bg-#fafafb rounded-4 relative overflow-hidden'>
-                          <select className='w-full h-full bg-white border-none' >
+                        <div className='w-120  bg-#fafafb rounded-4 relative overflow-hidden'>
+                          <select className='w-[80px] h-full bg-white border-none' >
                             <option value="III">III</option>
                             <option value="II">II</option>
                           </select>
                         </div>
                       </div>
-                      <div className='w-203 h-45 text-0 relative ml-4'>
-                        <span className="block font-Inter text-14px font-bold leading-22px text-#323842 relative whitespace-nowrap">
+                      <div className=''>
+                        <span className="block font-Inter text-14px font-bold leading-30px text-#323842 relative whitespace-nowrap">
                           CLASS
                         </span>
                         <div className='w-202 h-21 bg-#fafafb rounded-4 relative overflow-hidden'>
@@ -79,34 +113,29 @@ function Admin_2() {
                           </select>
                         </div>
                       </div>
-                    </div>
-
-                    <div className="flex ">
-                      <span className="block font-Inter text-14px font-bold leading-22px text-#323842 relative whitespace-nowrap">
-                        STAFF EMAIL
-                      </span>
-                      <button className='w-258 h-21 bg-[rgba(250,250,251,0.93)] rounded-4 border-none relative mt-px'>
-                        <span className="flex font-Inter text-14px font-normal leading-22px text-#171a1f items-center absolute top-0 left-0 right-[98px] bottom-0 whitespace-nowrap">
-                          abcd.22ai@kongu.edu
-                        </span>
-                      </button>
-
-                      <div className='w-83 h-45 text-0 bg-[rgba(0,0,0,0)] relative ml-4'>
+                      <div className='w-203 h-20 text-0 relative ml-4'>
                         <span className="block font-Inter text-14px font-bold leading-22px text-#323842 relative whitespace-nowrap">
                           SECTION
                         </span>
                         <button className='w-82 h-21 bg-#fafafb rounded-4 border-none relative mt-px'>
-                          <span className="flex font-Inter text-14px font-normal leading-22px text-#171a1f items-center absolute top-0 left-0 right-[60px] bottom-0 whitespace-nowrap">
-                            A
-                          </span>
-                          <div className='w-14 h-14 absolute top-1/2 right-11 translate-x-0 -translate-y-1/2 overflow-hidden'>
-                            <div className='w-10.5 h-6.189 bg-[url(../assets/images/7874cf6e-e1f6-4624-9127-a423b308fda9.png)] bg-cover bg-no-repeat relative mt-4.083 ml-1.75' />
-                          </div>
+                          <select className='w-full h-full bg-white ' >
+                            <option value="A">A</option>
+                            <option value="B">B</option>
+                          </select>
                         </button>
                       </div>
                     </div>
-                    <button className='w-122 h-36 bg-#8353e2 rounded-4 border-20px relative'>
-                      <span className="font-Inter text-18px font-normal leading-28px text-#171a1f absolute top-[50%] left-[50%] transform [-translate-x-50% -translate-y-50%] whitespace-nowrap">
+                    <div className="flex h-[9vh]">
+                      <span className="block font-Inter text-14px font-bold leading-22px text-#323842 relative whitespace-nowrap">
+                        STAFF EMAIL
+                      </span>
+                      <div className='w-135  bg-#fafafb rounded-4 relative overflow-hidden'>
+                        <input type="text" className='w-full  bg-[rgba(250,250,251,0.93)] rounded- border-none relative ' value={selectedEmail} readOnly />
+                      </div>
+                    </div>
+                    <button className='w-79 h-[5vh] bg-white rounded- border-20px relative'>
+                      <span className="font-Inter text-18px font-normal leading-28px text-#171a1f"
+                      onClick={HandleAllocateClick}>
                         ALLOCATE
                       </span>
                     </button>
