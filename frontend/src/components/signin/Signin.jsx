@@ -69,11 +69,12 @@ function Signin() {
                     </button>
                 </div>
             </>
+       
         return (
             <div>
                 <MainPage />
-                <div className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[645px] bg-[rgba(255,255,255,0.85)] rounded-xl">
-                    <div className="grid grid-cols-2">
+                <div className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 sm:w-full md:w-3/4 lg:w-1/2 xl:w-1/3 2xl:w-[80vw] h-auto sm:h-full bg-[rgba(255,255,255,0.85)] rounded-xl">
+                    <div className="grid grid-cols-1 sm:grid-cols-2">
                         <div className='column1'>
                             <div className="flex items-start justify-center">
                                 <div className="w-10 h-10 relative top-14">
@@ -90,8 +91,8 @@ function Signin() {
                             </div>
                             <div className="relative top-32 left-12 mt-2">
                                 <h6 className="text">Unlock happiness: Sign in to access SAP calculation tool.</h6>
-                            </div>
-                            <div className="relative top-32 left-12 mt-4">
+                            </div>   
+                                <div className="relative top-32 left-12 mt-4">
                                 <h2 className="text-2xl font-bold"><b>Email</b></h2>
                                 <div className="textbox mt-2">
                                     <input type="text" className="textbox w-4/5 h-15 px-3 py-2 placeholder-gray-400 border rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
@@ -104,7 +105,8 @@ function Signin() {
                             </div>
                         </div>
                         <div className="column2">
-                            <img src='./images/study_group_2.jpg' alt="Study group" className="w-full h-full object-cover rounded-md" />
+                            
+                        <img src='./images/study_group_2.jpg' alt="Study group" className="w-full h-auto sm:h-full object-cover rounded-md" />
                         </div>
                     </div>
                 </div>
